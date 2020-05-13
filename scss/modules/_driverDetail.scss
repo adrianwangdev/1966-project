@@ -1,0 +1,122 @@
+.infoContainer {
+  background: #f7f8fa;
+  height: auto;
+  width: 100%;
+  padding: 3.5rem 0;
+
+  .driverInfoMargin {
+    margin-right: 2rem;
+  }
+
+  .driverImageMargin {
+    margin-top: 1rem;
+  }
+
+  .driverImage {
+    width: 100%;
+    height: 520px;
+    background-color: #008b8b;
+    background-position: 50% 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("../../images/communication/communication_thumb01.png");
+  }
+
+  .driverInfo {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .driverCompany {
+    color: #666666;
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .driverName {
+    font-weight: bold;
+    color: #eeb700;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid #e4b92c;
+      box-sizing: border-box;
+      border-radius: 4px;
+      color: #e4b92c;
+      font-size: 0.9rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5px 4px;
+    }
+  }
+
+  .carType {
+    color: #666666;
+    font-size: 1.25rem;
+    font-weight: bold;
+    letter-spacing: 1.15px;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+
+    span:nth-child(2) {
+      font-size: 1rem;
+    }
+  }
+
+  .driverDetailInfoMenu {
+    margin-top: 1rem;
+    li {
+      padding-left: 1rem;
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  .driverDetailInfo {
+    color: #444444;
+    font-size: 1rem;
+    border-left: 4px solid #eeb700;
+    padding-left: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .menuTitle {
+    width: 40%;
+    display: inline-block;
+  }
+
+  .reservationContainer {
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .reservationBtn {
+    background: #efc94c;
+    color: #fff;
+    width: 100%;
+    border: 1px solid #efc94c;
+    border-radius: 4px;
+    transition: 0.5s;
+    font-size: 1.15rem;
+    outline: none;
+    padding: 13px;
+    font-weight: 700;
+  }
+
+  .ml-auto {
+    margin-left: auto;
+  }
+}
+
+// 隱藏CK工具列
+.ck {
+  .ck-content {
+    border: 1px solid #c4c4c4;
+  }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Grid system -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> -->
+  <!-- Icon font -->
+  <link rel="stylesheet" href="css/fontello.css">
+  <!-- plugin -->
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <!-- Style -->
+  <link rel="stylesheet" href="css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="driverDetail wrapper">
+
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+              <div class="header-flex-container">
+      
+                <a href="/" class="logo">
+                  <img src="images/logo-dark.png" alt="">
+                </a>
+      
+                <nav class="navbar">
+                  <ul class="navbar__list">
+                    <li>
+                      <a href="#">首頁<i class="icon-down"></i></a>
+                      <ul class="navbar__child-list">
+                      <li><a href="#">最新消息</a></li>
+                      <li><a href="#">媒體報導</a></li>
+                      <li><a href="#">關於 1966 照護網</a></li>
+                    </ul>
+                    </li>
+                    <li><a href="#">活動快訊</a></li>
+                    <li>
+                      <a href="#">交通服務<i class="icon-down"></i></a>
+                      <ul class="navbar__child-list">
+                        <li><a href="#">車隊派車</a></li>
+                        <li><a href="#">1966 認證司機</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">銀髮旅遊</a></li>
+                    <li><a href="#">照護服務</i></a></li>
+                    <li>
+                      <a href="#">智慧輔具<i class="icon-down"></i></a>
+                      <ul class="navbar__child-list">
+                        <li><a href="#">AIOT 智慧輔具</a></li>
+                        <li><a href="#">家居輔具</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">在地商城<i class="icon-down"></i></a>
+                      <ul class="navbar__child-list">
+                        <li><a href="#">在地創生</a></li>
+                        <li><a href="#">地方文創</a></li>
+                        <li><a href="#">各地特產</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="#">募資計畫</a></li>
+                  </ul>
+                </nav>
+      
+                <div class="mobile-menu-button icon-menu"></div>
+      
+              </div>
+            </div>
+          </header>
+
+          <!-- driver -->
+    <div class="driverDetail">
+        <div class="infoContainer">
+          <div class="container">
+            <!-- driverInfo -->
+            <div class="row">
+              <div class="col-md-12 col-lg-6 col-xl-5">
+                <div class="driverImage"></div>
+              </div>
+              <div class="driverInfoMargin mt-5 mt-lg-0 col-md-12 col-lg-5">
+                <div class="driverInfo">
+                  <p class="driverCompany">所屬車隊，例如太豐車行</p>
+                  <h4 class="driverName">
+                    陳鑽祥
+                    <span>福祉車</span>
+                  </h4>
+                  <hr class="w-100" style="background: #bbbbbb;width: 100%;" />
+                  <h4 class="carType">
+                    <span><i class="icon-car mr-1"></i>TOYOTA WISH</span>
+                    <span class="ml-auto">最多乘載6人</span>
+                  </h4>
+                  <ul class="driverDetailInfoMenu">
+                    <h5 class="driverDetailInfo">司機資料</h5>
+                    <li>
+                      <span class="menuTitle">性別</span>
+                      <span class="menuDetail">男性</span>
+                    </li>
+                    <li>
+                      <span class="menuTitle">服務地區</span>
+                      <span class="menuDetail">新北市、桃園市</span>
+                    </li>
+                    <li>
+                      <span class="menuTitle">擅長語言</span>
+                      <span class="menuDetail">國語、台語</span>
+                    </li>
+                  </ul>
+  
+                  <ul class="driverDetailInfoMenu mt-3">
+                    <h5 class="driverDetailInfo">其他服務</h5>
+                    <li>代駕</li>
+                    <li>寵物可上車</li>
+                    <li>可刷卡</li>
+                  </ul>
+  
+                  <div class="reservationContainer mt-auto">
+                    <button class="reservationBtn">預約訂車</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container mt-5">
+          <h1>「 司機簡介 」司機簡介司機簡介司機簡介司機簡介</h1>
+          <p>
+            「 司機簡介 」司機簡介司機簡介司機簡介司機簡介「 司機簡介
+            」司機簡介司機簡介司機簡介司機簡介「 司機簡介
+            」司機簡介司機簡介司機簡介司機簡介「 司機簡介
+            」司機簡介司機簡介司機簡介司機簡介「 司機簡介
+            」司機簡介司機簡介司機簡介司機簡介「 司機簡介
+            」司機簡介司機簡介司機簡介司機簡介
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      const menuBtn = document.querySelector('.mobile-menu-button')
+      const navbar = document.querySelector('.navbar')
+      const navList = document.querySelectorAll('.navbar__list li')
+  
+      menuBtn.addEventListener('click', () => {
+        navbar.classList.toggle('open')
+      })
+  
+      navList.forEach(list => {
+        list.classList.remove('active')
+        list.addEventListener('click', event => {
+          event.stopPropagation()
+          list.classList.toggle('active')
+        })
+      })
+  
+    </script>
+</body>
+</html>
