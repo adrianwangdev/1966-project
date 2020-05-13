@@ -1,0 +1,117 @@
+.news-list {
+  margin-top: 32px;
+
+  @include rwd($screen-lg) {
+    margin-top: 0;
+  }
+
+  .category {
+    margin-right: 4px;
+  }
+
+  .news-list-flex-container {
+    display: flex;
+    justify-content: space-between;
+
+    @include rwd($screen-lg) {
+      display: block;
+      border-bottom: 1px solid $color-grayE;
+    }
+  }
+
+  .news-item {
+    display: inline-block;
+    color: $color-gray6;
+
+    @include rwd($screen-lg) {
+      display: block;
+      margin-top: 4px;
+    }
+  }
+
+  time {
+    margin-left: 16px;
+    @include text(14px);
+    text-align: right;
+    color: $color-grayA;
+
+    @include rwd($screen-lg) {
+      margin-left: 0;
+      text-align-last: left;
+    }
+  }
+
+  li {
+    padding: 8px 0;
+    cursor: pointer;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+
+    &:hover {
+      background: fade-out($color-primary, .92);
+
+      .news-item {
+        color: $color-gray4;
+      }
+    }
+  }
+}
+
+.news-list--more {
+  float: right;
+  padding: 8px 12px;
+  padding-right: 0;
+  color: $color-primary-dark;
+
+  &:hover {
+    background: inherit;
+  }
+}
+
+.campaign {
+
+  img {
+    width: 100%;
+  }
+
+  .card__content {
+
+    .title {
+      color: $color-campaign;
+    }
+
+    .button {
+      color: white;
+      background: $color-campaign;
+
+      &:hover {
+        background: darken($color-campaign, 4);
+      }
+    }
+  }
+}
+
+.news {
+
+  .card.campaign {
+
+    @include rwd($screen-lg) {
+      margin-top: 62px;
+    }
+    @include rwd($screen-md) {
+      margin-top: 54px;
+    }
+    @include rwd($screen-sm) {
+      margin-top: 80px;
+    }
+  }
+}
+
+.campaign__name {
+  padding: 4px 8px;
+  color: white;
+  background: $color-campaign;
+}

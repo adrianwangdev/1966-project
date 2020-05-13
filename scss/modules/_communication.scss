@@ -1,0 +1,180 @@
+section.communication {
+  padding-bottom: 40px;
+
+  @include rwd($screen-md) {
+    padding-bottom: 32px;
+  }
+  @include rwd($screen-xs) {
+    padding-bottom: 20px;
+  }
+
+  .section-title {
+    span {
+      color: $color-communication;
+    }
+    .color-line {
+      background: $color-communication;
+    }
+  }
+
+  .area-category {
+    margin-bottom: 16px;
+
+    p, a {
+      border-color: $color-communication;
+    }
+
+    p {
+      color: $color-communication;
+    }
+
+    a {
+      background: $color-communication;
+
+      &:hover {
+        background: darken($color-communication, 8)
+      }
+    }
+  }
+
+  .driver-menu {
+    margin-top: 40px;
+    margin-bottom: 48px;
+
+    @include rwd($screen-sm) {
+      margin-bottom: 16px;
+    }
+    @include rwd($screen-xs) {
+      margin-top: 24px;
+      margin-bottom: 0;
+    }
+  }
+
+  .card {
+    cursor: pointer;
+
+    &.communication {
+      border-radius: 16px;
+      -webkit-border-radius: 16px;
+      -moz-border-radius: 16px;
+      -ms-border-radius: 16px;
+      -o-border-radius: 16px;
+      overflow: hidden;
+
+      @include rwd($screen-md) {
+        margin-bottom: 24px;
+      }
+      @include rwd($screen-sm) {
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+      }
+      @include rwd($screen-xs) {
+        margin-bottom: 16px;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .card__content {
+      background: $color-communication;
+      box-shadow: 0 -4px 8px rgba(0, 0, 0, .24);
+
+      @include rwd($screen-lg) {
+        padding: 8px;
+        padding-top: 28px;
+        padding-bottom: 16px;
+      }
+      @include rwd($screen-sm) {
+        padding-bottom: 8px;
+      }
+
+      .title {
+        margin-top: 12px;
+        @include text(18px);
+        color: white;
+        @include rwd($screen-lg) {
+          line-height: 1.4rem;
+        }
+      }
+
+      .info {
+        margin-bottom: 0;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: darken(white, $amount: 2);
+        overflow: hidden;
+
+        @include rwd($screen-md) {
+          white-space: normal;
+          text-overflow: clip;
+          overflow: visible;
+        }
+        @include rwd($screen-sm) {
+          display: none;
+        }
+      }
+    }
+
+    .category {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      border-color: darken($color-communication, 12);
+      color: darken($color-communication, 12);
+
+      @include rwd($screen-lg) {
+        top: 8px;
+        left: 8px;
+        right: auto;
+      }
+
+      &.category--communication {
+        background: fade-out(white, .2);
+      }
+    }
+
+    &:hover {
+      height: 403px;
+
+      @include rwd($screen-xl) {
+        height: 352px;
+      }
+      @include rwd($screen-lg) {
+        height: 315px;
+      }
+      @include rwd($screen-md) {
+        height: auto;
+      }
+
+      .card__content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        @include rwd($screen-md) {
+          position: relative;
+        }
+
+        .info {
+          white-space: normal;
+          text-overflow: clip;
+        }
+      }
+    }
+  }
+
+  .more-button {
+
+    a {
+      border-color: $color-communication;
+      color: darken($color-communication, 12);
+      background: fade-out($color-communication, .88);
+    }
+  }
+}

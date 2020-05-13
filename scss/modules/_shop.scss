@@ -1,0 +1,42 @@
+section.shop {
+  background: $color-background;
+
+  .section-title {
+    span {
+      color: $color-shop;
+    }
+    .color-line {
+      background: $color-shop;
+    }
+  }
+
+  .shop-info {
+    margin-top: 40px;
+    margin-bottom: 24px;
+    color: $color-gray9;
+
+    @include rwd($screen-sm) {
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.shop-pictures {
+
+  img {
+    @include size(calc(100% / 6 - 5px));
+    transition: all .2s;
+
+    @include rwd($screen-xs) {
+      @include size(calc(100% / 6 - 5px));
+    }
+  }
+  a:hover {
+    img {
+      filter: drop-shadow(0 4px 8px rgba(0,0,0,.4));
+      transform: translateY(-12px);
+    }
+  }
+
+}

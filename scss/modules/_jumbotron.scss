@@ -1,0 +1,83 @@
+.jumbotron__image {
+  background: url(../../images/jumbotron.png) no-repeat center;
+  background-size: cover;
+  height: 560px;
+
+  @include rwd($screen-sm) {
+    height: 400px;
+  }
+  @include rwd($screen-xs) {
+    height: 240px;
+  }
+}
+
+.jumbotron__content {
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  width: 100%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+
+  @include rwd($screen-xs) {
+    text-align: center;
+  }
+
+  h1.title {
+    margin-bottom: 8px;
+    @include text(42px);
+    letter-spacing: .06rem;
+
+    @include rwd($screen-sm) {
+      margin-bottom: 0;
+      @include text(36px);
+    }
+    @include rwd($screen-xs) {
+      @include text(28px);
+    }
+  }
+
+  h2.title {
+    display: inline-block;
+    margin-bottom: 16px;
+    padding: 0 12px;
+    @include text(48px);
+    background: rgba($color: $color-primary, $alpha: .8);
+
+    @include rwd($screen-sm) {
+      margin-bottom: 8px;
+      padding: 0 10px;
+      @include text(32px);
+    }
+    @include rwd($screen-xs) {
+      margin-bottom: 16px;
+      padding: 0 6px;
+      @include text(21px);
+    }
+  }
+
+  .title,
+  .subtitle {
+    color: white;
+  }
+
+  .subtitle {
+    width: 600px;
+    font-weight: normal;
+    @include text(20px);
+
+    @include rwd($screen-sm) {
+      width: auto;
+      @include text(16px);
+      max-width: 440px;
+    }
+    @include rwd($screen-xs) {
+      margin: 0 auto;
+      max-width: 288px;
+      @include text(14px);
+    }
+  }
+}

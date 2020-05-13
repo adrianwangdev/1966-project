@@ -1,0 +1,81 @@
+section.partner {
+
+  .partner__slider {
+    margin-top: 40px;
+
+    .owl-stage-outer {
+      padding-top: 12px;
+    }
+
+    .owl-item {
+      text-align: center;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 16px;
+        border: 1px solid $color-grayE;
+        border-radius: 8%;
+        width: auto;
+        height: 160px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+        transition: all .2s;
+
+        @include rwd($screen-sm) {
+          height: 120px;
+        }
+      }
+
+      p {
+        color: $color-gray6;
+      }
+
+      &:hover {
+        background: inherit;
+
+        img {
+          box-shadow: 0 4px 12px rgba(0, 0, 0, .12);
+        }
+      }
+    }
+
+    .owl-prev, .owl-next {
+      position: absolute;
+      top: 12px;
+      width: 80px;
+      height: 100%;
+      transform: translateY(-12%);
+      -webkit-transform: translateY(-12%);
+      -ms-transform: translateY(-12%);
+      transform: translateY(-12%);
+      z-index: 1;
+      cursor: pointer;
+    }
+    .owl-prev {
+      left: -72px;
+    }
+    .owl-next {
+      right: -72px;
+    }
+
+    .owl-prev-icon, .owl-next-icon {
+      position: absolute;
+      top: 50%;
+      @include text(24px);
+      color: darken($color-primary, 12);
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 1;
+      cursor: pointer;
+    }
+    .owl-prev-icon {
+      left: 16px;
+    }
+    .owl-next-icon {
+      right: 16px;
+    }
+
+  }
+}

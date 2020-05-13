@@ -1,0 +1,72 @@
+section.aiot {
+
+  .section-title {
+    span {
+      color: $color-aiot;
+    }
+    .color-line {
+      background: $color-aiot;
+    }
+  }
+}
+
+.aiot-category {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 48px;
+
+  @include rwd($screen-xs) {
+    margin-top: 24px;
+  }
+
+  a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:hover {
+      background: inherit;
+
+      i {
+        background: darken($color-aiot, 8);
+      }
+
+      p {
+        color: darken($color-aiot, 8);
+      }
+    }
+  }
+
+  i {
+    @extend %center;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    @include size(160px);
+    @include text(80px);
+    color: white;
+    background: $color-aiot;
+    transition: all .2s;
+    @include rwd($screen-md) {
+      @include size(120px);
+      @include text(60px);
+    }
+    @include rwd($screen-xs) {
+      @include size(80px);
+      @include text(40px);
+    }
+  }
+
+  p {
+    @include text(24px);
+    font-weight: 700;
+    color: $color-aiot;
+    transition: all .2s;
+
+    @include rwd($screen-md) {
+      @include text(20px);
+    }
+    @include rwd($screen-xs) {
+      @include text(18px);
+    }
+  }
+}

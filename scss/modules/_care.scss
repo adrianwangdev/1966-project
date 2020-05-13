@@ -1,0 +1,113 @@
+section.care {
+  background: $color-background;
+
+  .section-title {
+    span {
+      color: $color-care;
+    }
+    .color-line {
+      background: $color-care;
+    }
+  }
+
+  .area-category {
+
+    p, a {
+      border-color: $color-care;
+    }
+
+    p {
+      color: $color-care;
+    }
+
+    a {
+      background: $color-care;
+
+      &:hover {
+        background: darken($color-care, 4);
+      }
+    }
+  }
+
+  .care-cards {
+
+    .col-xs-6 {  /* change boostrap grid */
+      @include rwd($screen-xs) {
+        width: 100%;
+      }
+    }
+  }
+
+  .card {
+
+    &.care {
+      border-bottom: 2px solid $color-care;
+
+      @include rwd($screen-xs) {
+        margin-bottom: 16px;
+      }
+
+      &:first-child {
+        @include rwd($screen-sm) {
+          margin-bottom: 16px;
+        }
+      }
+
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .card__content {
+      padding-left: 24px;
+      padding-right: 24px;
+      text-align: center;
+      background: white;
+
+      .title {
+        margin-top: 12px;
+        margin-bottom: 8px;
+        @include text(18px);
+        color: $color-care;
+
+        @include rwd($screen-lg) {
+          margin-top: 32px;
+        }
+      }
+
+      .info {
+        margin-bottom: 0;
+      }
+    }
+
+    .category {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      border-color: darken($color-care, 12);
+      color: darken($color-care, 12);
+
+      &.category--care {
+        background: white;
+
+        @include rwd($screen-md) {
+          right: 50%;
+          transform: translateX(50%);
+          -webkit-transform: translateX(50%);
+          -moz-transform: translateX(50%);
+          -ms-transform: translateX(50%);
+          -o-transform: translateX(50%);
+        }
+      }
+    }
+  }
+
+  ul.social-media-list {
+
+    @include rwd($screen-sm) {
+      display: none;
+    }
+  }
+
+}

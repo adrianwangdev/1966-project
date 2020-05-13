@@ -1,0 +1,59 @@
+section.campaign {
+  padding-bottom: 40px;
+
+  @include rwd($screen-sm) {
+    padding-bottom: 24px;
+  }
+
+  .campaign-review {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include rwd($screen-sm) {
+      margin-bottom: 24px;
+    }
+    @include rwd($screen-xs) {
+      margin-top: 24px;
+      margin-bottom: 0;
+    }
+
+    .col-xs-6 {  /* change boostrap grid */
+      @include rwd($screen-xs) {
+        width: 100%;
+      }
+    }
+  }
+
+  .card {
+
+    &.campaign {
+      @include rwd($screen-xs) {
+        margin-bottom: 16px;
+      }
+    }
+
+    &:first-child {
+      @include rwd($screen-sm) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .section-title {
+    span {
+      color: $color-campaign;
+    }
+    .color-line {
+      background: $color-campaign;
+    }
+  }
+
+  .more-button {
+
+    a {
+      border-color: $color-campaign;
+      color: darken($color-campaign, 12);
+      background: fade-out($color-campaign, .88);
+    }
+  }
+}

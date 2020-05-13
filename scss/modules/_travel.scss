@@ -1,0 +1,107 @@
+section.travel {
+
+  .section-title {
+    span {
+      color: $color-travel;
+    }
+    .color-line {
+      background: $color-travel;
+    }
+  }
+}
+
+.travel-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include rwd($screen-xs) {
+    flex-wrap: wrap;
+  }
+
+  .info {
+    display: inline-block;
+    width: 75%;
+    color: $color-gray9;
+
+    @include rwd($screen-sm) {
+      padding: 16px 0;
+    }
+    @include rwd($screen-xs) {
+      padding: 8px 0;
+      width: 100%;
+    }
+  }
+}
+
+
+.travel-go {
+  @extend %center;
+  width: calc(25% - 4px);
+  height: 104px;
+  background: $color-travel;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  @include rwd($screen-md) {
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+  @include rwd($screen-xs) {
+    margin-bottom: 12px;
+    width: 100%;
+    height: 48px;
+  }
+
+  p {
+    margin-right: 8px;
+    font-weight: bold;
+    @include text(30px);
+    color: white;
+
+    @include rwd($screen-lg) {
+      @include text(26px);
+    }
+    @include rwd($screen-md) {
+      margin-right: 4px;
+    }
+    @include rwd($screen-sm) {
+      margin-right: 0;
+      @include text(20px);
+    }
+    @include rwd($screen-xs) {
+      margin-right: 6px;
+      line-height: .6rem;
+    }
+  }
+
+  img {
+
+    @include rwd($screen-md) {
+      margin-right: 8px;
+    }
+    @include rwd($screen-sm) {
+      height: 22px;
+    }
+    @include rwd($screen-xs) {
+      margin-bottom: 2px;
+    }
+  }
+
+  &:hover {
+    background: darken($color-travel, 8);
+  }
+}
+
+.travel-pictures {
+
+  @include rwd($screen-xs) {
+    margin-top: 0;
+  }
+
+  img {
+    width: calc(100% / 4 - 4px);
+  }
+}

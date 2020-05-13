@@ -1,0 +1,152 @@
+section.donate {
+  background: $color-background;
+
+  .section-title {
+    span {
+      color: $color-donate;
+    }
+    .color-line {
+      background: $color-donate;
+    }
+  }
+
+  .donate-review {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include rwd($screen-sm) {
+      margin-bottom: 24px;
+    }
+    @include rwd($screen-xs) {
+      margin-top: 24px;
+      margin-bottom: 0;
+    }
+
+    .col-xs-6 {  /* change boostrap grid */
+      @include rwd($screen-xs) {
+        width: 100%;
+      }
+    }
+  }
+
+  .card {
+    border: 1px solid $color-grayE;
+
+    &.donate {
+
+      @include rwd($screen-xs) {
+        margin-bottom: 16px;
+      }
+
+      &:first-child {
+        @include rwd($screen-sm) {
+          margin-bottom: 16px;
+        }
+      }
+
+      img {
+        width: 100%;
+      }
+
+      .card__content {
+        background: white;
+
+        .icon-donate {
+          margin-left: -4px;
+        }
+
+        .title {
+          margin-top: 16px;
+          color: $color-donate;
+        }
+
+        .button {
+          color: white;
+          background: $color-donate;
+
+          &:hover {
+            background: darken($color-donate, 8);
+          }
+        }
+      }
+
+      .succeeded {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @extend %center;
+        border-radius: 50%;
+        border: 4px solid darken($color-donate, 4);
+        @include size(104px);
+        @include text(16px);
+        letter-spacing: 1px;
+        color: white;
+        background: fade-out($color-donate, .12);
+      }
+
+      .progress-bar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+
+        &.percentage--100 {
+          .progress-bar__line {
+            width: 100%;
+          }
+          .progress-bar__percentage {
+            left: 100%;
+          }
+        }
+        &.percentage--71 {
+          .progress-bar__line {
+            width: 71%;
+          }
+          .progress-bar__percentage {
+            left: 71%;
+          }
+        }
+      }
+      .progress-bar__line {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 24%;
+        height: 3px;
+        background: $color-donate;
+      }
+      .progress-bar__percentage {
+        @extend %center;
+        position: absolute;
+        top: 0;
+        left: 24%;
+        transform: translate(-50%, -50%);
+        @include size(44px);
+        @include text(14px);
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+        background: $color-donate;
+        user-select: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+      }
+
+    }
+  }
+
+  .more-button {
+
+    a {
+      border-color: $color-donate;
+      color: darken($color-donate, 12);
+      background: fade-out($color-donate, .88);
+    }
+  }
+}

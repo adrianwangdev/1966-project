@@ -1,0 +1,122 @@
+section.menu {
+  background: $color-background;
+
+  @include rwd($screen-md) {
+    padding-bottom: 40px;
+  }
+  @include rwd($screen-xs) {
+    padding-bottom: 24px;
+  }
+}
+
+.menu-card-flex-container {
+  display: flex;
+  justify-content: space-between;
+
+  @include rwd($screen-md) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.menu-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 32px;
+  border: 1px solid $color-grayD;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  background: white;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  @include rwd($screen-lg) {
+    padding: 16px 24px;
+  }
+  @include rwd($screen-md) {
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+  @include rwd($screen-xs) {
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding: 8px 10px;
+  }
+
+  img {
+    display: block;
+    margin-bottom: 4px;
+    width: 72px;
+
+    @include rwd($screen-lg) {
+      margin-bottom: 6px;
+      width: 48px;
+    }
+  }
+
+  .title {
+    @include text(20px);
+
+    @include rwd($screen-xs) {
+      @include text(16px);
+    }
+  }
+
+  &:hover {
+    color: inherit;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    transform: scale(1.06);
+    -webkit-transform: scale(1.06);
+    -moz-transform: scale(1.06);
+    -ms-transform: scale(1.06);
+    -o-transform: scale(1.06);
+  }
+
+  &.care {
+    .title {
+      color: $color-care;
+    }
+  }
+  &.communication {
+    .title {
+      color: $color-communication;
+    }
+  }
+  &.travel {
+    .title {
+      color: $color-travel;
+    }
+  }
+  &.aiot {
+    .title {
+      color: $color-aiot;
+    }
+  }
+  &.shop {
+    .title {
+      color: $color-shop;
+    }
+  }
+  &.donate {
+    .title {
+      color: $color-donate;
+    }
+  }
+  &.campaign {
+    .title {
+      color: $color-campaign;
+    }
+  }
+}

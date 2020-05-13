@@ -1,0 +1,145 @@
+.footer {
+  padding-top: 64px;
+  padding-bottom: 80px;
+  background: $color-footer;
+
+  @include rwd($screen-sm) {
+    padding-top: 24px;
+    padding-bottom: 32px;
+  }
+
+  .brand-info {
+
+    @include rwd($screen-sm) {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+  }
+
+  img {
+    height: 44px;
+  }
+
+  .info {
+    margin-top: 16px;
+    margin-bottom: 40px;
+
+    @include rwd($screen-lg) {
+      margin-bottom: 32px;
+    }
+    @include rwd($screen-sm) {
+      margin-top: 4px;
+      margin-bottom: 16px;
+    }
+    @include rwd($screen-xs) {
+      margin-top: 8px;
+    }
+
+    .tel,
+    .location {
+      display: flex;
+      align-items: center;
+
+      @include rwd($screen-sm) {
+        justify-content: center;
+      }
+    }
+
+    a, i {
+      display: inline-block;
+      color: $color-footer-text;
+    }
+
+    i {
+      @include text(18px);
+      margin-right: 4px;
+    }
+
+    a {
+      @include text(14px);
+
+      &:hover {
+        color: $color-footer-link;
+        background: inherit;
+      }
+    }
+  }
+
+  ul.social-media-list {
+    margin-top: 0;
+    margin-bottom: 0;
+    justify-content: flex-start;
+
+    @include rwd($screen-sm) {
+      justify-content: center;
+    }
+
+    li {
+      margin: 0 4px;
+    }
+
+    a {
+      @include size(36px);
+      font-size: 20px;
+      background: $color-primary;
+
+      &:hover {
+        background: darken($color-primary, 8);
+      }
+    }
+  }
+
+  .footer-lists {
+
+    @include rwd($screen-xs) {
+      width: 100%;
+      margin-bottom: 32px;
+      padding: 0 12vw;
+    }
+  }
+
+  .copyright {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 6px 0;
+    text-align: center;
+    width: 100%;
+    background: $color-gray4;
+
+    p {
+      @include text(12px);
+      color: $color-gray9;
+    }
+  }
+
+  .footer-list {
+    margin-top: 4px;
+
+    li:last-child {
+      a {
+        border-bottom: 0;
+      }
+    }
+
+    a {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px dashed $color-footer-line;
+      @include text(14px);
+      color: $color-footer-list;
+
+      @include rwd($screen-sm) {
+        text-align: center;
+      }
+      @include rwd($screen-xs) {
+        padding: 8px 0;
+      }
+
+      &:hover {
+        color: $color-footer-text;
+        background: inherit;
+      }
+    }
+  }
+}
